@@ -1,0 +1,17 @@
+<div class="flex-container">
+  <h1>Burger Bot</h1>
+</div>
+<ng-container *ngFor="let message of messages | async">
+  <div class="messages" [ngClass]="{'from': message.sentBy ==='bot', 'to': message.sentBy ==='user'}">
+    <div class="flex-container">
+      {{message.content}}
+    </div> 
+  </div>
+
+</ng-container>
+<div class="flex-container" style="width:60%">
+  <label>Your message</label>
+  <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
+  <br>
+  <button (click)="sendMessage()">send</button>
+</div>

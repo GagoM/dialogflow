@@ -4,5 +4,9 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  
+  dialogflow:{
+    burgerBotClientKey: '67f175dae0954915ab048a64df820b22'
+  }
 };
